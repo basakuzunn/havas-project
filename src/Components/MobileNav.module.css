@@ -1,0 +1,19 @@
+
+.icon{
+    display: flex;
+    width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow: auto;
+    font-size: 30px;
+}
+.dropdown button {
+    background-color: #ffffff;
+    border-style: none;
+    cursor: pointer;
+  }
+  .dropdown-ul {
+    list-style-type: none;
+  }
+  
