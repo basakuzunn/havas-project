@@ -5,58 +5,75 @@ import './MobileNav.module.css';
 import styles from './MobileNav.module.css';
 import data from './NavigationData';
 
+
 interface Items {
   id: number;
   title: string;
+  key: number;
   href: string;
   headerObj: { title: string; items: string[] }[];
 }
 const MobileNav: React.FC<{}> = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [openTitle, setOpenTitle] = useState<number>(-1);
+
   let menu;
   let drop;
-  if (openMenu) {
-    drop = (
-      <>
-        {data.navData.map((data: Items) => {
-          return (
-            <div className={styles['dropdown-content']}>
-              {data.headerObj.map((index) => {
-                return (
-                  <ul className={styles['dropdown-ul']}>
-                    <li>
-                      <a>
-                        <b>{index.title}</b>
-                      </a>
-                    </li>
-                    {index.items.map((item) => {
-                      return (
-                        <li>
-                          <a>{item}</a>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                );
-              })}
-            </div>
-          );
-        })}
-      </>
-    );
+
+  function handleTitle(titleIndex: number): void {
+    if (openTitle === -1) {
+      setOpenTitle(titleIndex);
+    } else {
+      if (openTitle === titleIndex) {
+        setOpenTitle(-1);
+      } else {
+        setOpenTitle(titleIndex);
+      }
+    }
   }
+
+ 
   if (showMenu) {
     menu = (
-      <div>
+      <div id='menuID'>
         <ul className={styles['item-container']}>
           {data.navData.map((data: Items) => {
             return (
               <div className={styles['dropdown']}>
                 <>
-                  <button onClick={() => setOpenMenu(!openMenu)}>
+                  <button
+                  className='accordion'
+                    onClick={() => {
+                      handleTitle(data.id);
+                      setOpenMenu(!openMenu);
+                    }}
+                  >
                     {data.title}
                   </button>
+                  <div className={styles['dropdown-content']}>
+              {openTitle === data.id
+                ? data.headerObj.map((index) => {
+                    return (
+                      <ul className={styles['dropdown-ul']}>
+                        <li>
+                          <a>
+                            <b>{index.title}</b>
+                          </a>
+                        </li>
+
+                        {index.items.map((item) => {
+                          return (
+                            <li>
+                              <a>{item}</a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    );
+                  })
+                : ''}
+            </div>
                 </>
               </div>
             );

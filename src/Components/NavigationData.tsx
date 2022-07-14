@@ -2,10 +2,12 @@ const data = {
   navData: [
     {
       id: 1,
+      key:1,
       title: 'Accounts',
       href:'#',
       headerObj: [
         {
+          
           title: 'Chequing Accounts',
           items: [
             'The Operations Account',
@@ -15,6 +17,7 @@ const data = {
           ],
         },
         {
+          
           title: 'Chequing Accounts',
           items: [
             'The High-Interest Savings Account',
@@ -22,6 +25,7 @@ const data = {
           ],
         },
         {
+          
           title: 'Useful resources',
           items: [
             'Bank Account Selector',
@@ -36,6 +40,7 @@ const data = {
 
     {
       id: 2,
+      key:2,
       title: 'Credit Cards',
       href:'#',
       headerObj: [
@@ -79,6 +84,7 @@ const data = {
     },
     {
       id: 3,
+      key:3,
       title: 'Mortgage',
       href:'#',
       headerObj: [
@@ -122,6 +128,7 @@ const data = {
     },
     {
       id: 4,
+      key:4,
       title: 'Loans',
       href:'#',
       headerObj: [
@@ -170,6 +177,7 @@ const data = {
     },
     {
       id: 5,
+      key:5,
       title: 'Investments',
       href:'#',
       headerObj: [
