@@ -5,11 +5,11 @@
   top: 0;
   overflow: auto;
   font-size: 30px;
-  padding: 25px;
-  margin-left: 100px;
+  padding: 1.5625em;
+  margin-left:  6.25em;
 }
 .dropdown button {
-  height: 50px;
+  height:  3.125em;
   border-style: none;
   cursor: pointer;
   background-color: #ffffff;
@@ -26,36 +26,36 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
-  padding: 20px;
-  margin-left: -40px;
+  padding: 1.25em;
+  margin-left: -2.5em;
   
 }
 .Logo {
- padding: 30px;
+ padding:  1.875em;
 }
 
 .dropdown button:hover{
   background-color: #FDB812;
-  width: 922px;
+  width: 57.625em;
 
 }
 
 .dropdown button:focus{
   background-color: #FDB812;
-  width: 922px;
+  width: 57.625em;
 }
  .dropdown-content{
  display: flex;
 flex-direction: column;
 align-items: flex-start;
-gap: 24px;
+gap: 1.5em;
 
 }
 .dropdown-ul{
-  padding: 10px;
+  padding: 0.625em;
   
 }
 .dropdown-li{
-  padding: 10px;
-  margin-left: -8px;
+  padding: 0.625em;
+  margin-left: -0.5em;
 }
