@@ -73,4 +73,7 @@
     .item-container{
         display: none;
     }
+    .Logo{
+      display: none;
+    }
 }

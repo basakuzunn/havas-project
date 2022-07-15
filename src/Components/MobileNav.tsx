@@ -4,7 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import './MobileNav.module.css';
 import styles from './MobileNav.module.css';
 import data from './NavigationData';
-
+import logo from './Img/LBC LogoM.png'
 
 interface Items {
   id: number;
@@ -37,13 +37,14 @@ const MobileNav: React.FC<{}> = () => {
   if (showMenu) {
     menu = (
       <div id='menuID'>
+
         <ul className={styles['item-container']}>
           {data.navData.map((data: Items) => {
             return (
+              <>
               <div className={styles['dropdown']}>
                 <>
                   <button
-                  className='accordion'
                     onClick={() => {
                       handleTitle(data.id);
                       setOpenMenu(!openMenu);
@@ -64,7 +65,7 @@ const MobileNav: React.FC<{}> = () => {
 
                         {index.items.map((item) => {
                           return (
-                            <li>
+                            <li className={styles['dropdown-li']}>
                               <a>{item}</a>
                             </li>
                           );
@@ -76,7 +77,7 @@ const MobileNav: React.FC<{}> = () => {
             </div>
                 </>
               </div>
-            );
+              </>);
           })}
         </ul>
       </div>
@@ -85,6 +86,9 @@ const MobileNav: React.FC<{}> = () => {
 
   return (
     <nav>
+      <div className={styles['Logo']}>
+          <img alt='logo' src={logo} />
+        </div>
       <span>
         <FontAwesomeIcon
           className={styles.icon}
