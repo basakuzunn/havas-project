@@ -6,6 +6,7 @@ import styles from './MobileNav.module.css';
 import data from './NavigationData';
 import logo from './Img/LBC LogoM.png'
 
+
 interface Items {
   id: number;
   title: string;
@@ -36,7 +37,7 @@ const MobileNav: React.FC<{}> = () => {
  
   if (showMenu) {
     menu = (
-      <div id='menuID'>
+      <div className='menuID'>
 
         <ul className={styles['item-container']}>
           {data.navData.map((data: Items) => {
@@ -59,7 +60,7 @@ const MobileNav: React.FC<{}> = () => {
                       <ul className={styles['dropdown-ul']}>
                         <li>
                           <a>
-                            <b>{index.title}</b>
+                            <b >{index.title}</b>
                           </a>
                         </li>
 
