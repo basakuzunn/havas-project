@@ -5,6 +5,13 @@ const data = {
       key:1,
       title: 'Accounts',
       href:'#',
+      featureProduct:[{
+        name: 'PRODUCT NAME',
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
+        action: 'Action title',
+        link: 'Lorem ipsum link',
+      }],
       headerObj: [
         {
           
@@ -43,6 +50,13 @@ const data = {
       key:2,
       title: 'Credit Cards',
       href:'#',
+      featureProduct:[{
+        name: 'PRODUCT NAME',
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
+        action: 'Action title',
+        link: 'Lorem ipsum link',
+      }],
       headerObj: [
         {
           title: 'Chequing Accounts',
@@ -87,6 +101,13 @@ const data = {
       key:3,
       title: 'Mortgage',
       href:'#',
+      featureProduct:[{
+        name: 'PRODUCT NAME',
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
+        action: 'Action title',
+        link: 'Lorem ipsum link',
+      }],
       headerObj: [
         {
           title: 'Chequing Accounts',
@@ -131,6 +152,13 @@ const data = {
       key:4,
       title: 'Loans',
       href:'#',
+      featureProduct:[{
+        name: 'PRODUCT NAME',
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
+        action: 'Action title',
+        link: 'Lorem ipsum link',
+      }],
       headerObj: [
         {
           title: 'Lines of Credit',
@@ -180,6 +208,13 @@ const data = {
       key:5,
       title: 'Investments',
       href:'#',
+      featureProduct:[{
+        name: 'PRODUCT NAME',
+        subtitle: 'Lorem ipsum dolor sit amet.',
+        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
+        action: 'Action title',
+        link: 'Lorem ipsum link >',
+      }],
       headerObj: [
         {
           title: 'Investment Products',
