@@ -72,6 +72,9 @@
 h5 {
   color: #ffffff;
 }
+h4{
+  display: flex;
+}
 .goto-button {
   border-style: none;
   background-color: #004070;
@@ -191,4 +194,23 @@ h5 {
   background-color: #004070;
   color: #ffffff;
   border-style: none;
+}
+.public-buttons{
+display: flex;
+justify-content: space-between;
+}
+.public-list{
+  list-style-type: none;
+}
+.public-list-button{
+  border-style: none;
+  background-color: #ffffff;
+}
+.public-title{
+  opacity: 0.7;
+}
+.public-select{
+  border-style: none;
+  
+  width: 230px;
 }

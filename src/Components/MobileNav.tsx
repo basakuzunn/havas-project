@@ -4,6 +4,7 @@ import styles from './MobileNav.module.css';
 import data from './NavigationData';
 import logo from './Img/LBC LogoM.png';
 import Hamburger from 'hamburger-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 interface Items {
   id: number;
@@ -30,8 +31,6 @@ const MobileNav: React.FC<{}> = () => {
       }
     }
   }
-  console.log(showMenu);
-  console.log(openTitle);
 
   if (showMenu) {
     if (openTitle !== -1) {
@@ -108,6 +107,46 @@ const MobileNav: React.FC<{}> = () => {
               <button className={styles['goto-button']}>Business</button> <br />
               <button className={styles['goto-button']}>About Us</button>
             </div>
+            <div>
+              <div className={styles['public-buttons']}>
+                <p className={styles['public-title']}>Language</p>
+                <select className={styles['public-select']}>
+                  {data.publicData.map((item) => {
+                    return (
+                      <>
+                        {item.language.map((items) => {
+                          return (
+                            <option className={styles['public-list']}>
+                              <li>{items}</li>
+                            </option>
+                          );
+                        })}
+                      </>
+                    );
+                  })}
+                </select>
+              </div>
+              <div className={styles['public-buttons']}>
+                <p className={styles['public-title']}>Region</p>
+                <select className={styles['public-select']}>
+                  {data.publicData.map((item) => {
+                    return (
+                      <>
+                        {item.region.map((items) => {
+                          return (
+                            <>
+                              <option className={styles['public-list']}>
+                                <li>{items}</li>
+                              </option>
+                            </>
+                          );
+                        })}
+                      </>
+                    );
+                  })}
+                </select>
+              </div>
+            </div>
           </ul>
         </div>
       );
@@ -118,6 +157,7 @@ const MobileNav: React.FC<{}> = () => {
     <nav>
       <div className={styles['Logo']}>
         <img alt='logo' src={logo} />
+
         <Hamburger
           direction='right'
           onToggle={() => {

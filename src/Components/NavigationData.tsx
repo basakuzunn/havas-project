@@ -1,20 +1,28 @@
 const data = {
+  publicData: [
+    {
+      language: ['English', 'Turkish'],
+      region: ['Ontario', 'Alberta'],
+    },
+  ],
   navData: [
     {
       id: 1,
-      key:1,
+      key: 1,
       title: 'Accounts',
-      href:'#',
-      featureProduct:[{
-        name: 'PRODUCT NAME',
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
-        action: 'Action title',
-        link: 'Lorem ipsum link',
-      }],
+      href: '#',
+      featureProduct: [
+        {
+          name: 'PRODUCT NAME',
+          subtitle: 'Lorem ipsum dolor sit amet.',
+          description:
+            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          action: 'Action title',
+          link: 'Lorem ipsum link',
+        },
+      ],
       headerObj: [
         {
-          
           title: 'Chequing Accounts',
           items: [
             'The Operations Account',
@@ -24,7 +32,6 @@ const data = {
           ],
         },
         {
-          
           title: 'Chequing Accounts',
           items: [
             'The High-Interest Savings Account',
@@ -32,14 +39,12 @@ const data = {
           ],
         },
         {
-          
           title: 'Useful resources',
           items: [
             'Bank Account Selector',
             'Budget Calculator',
             'How to register for online banking',
             'Budgetting 101',
-           
           ],
         },
       ],
@@ -47,16 +52,19 @@ const data = {
 
     {
       id: 2,
-      key:2,
+      key: 2,
       title: 'Credit Cards',
-      href:'#',
-      featureProduct:[{
-        name: 'PRODUCT NAME',
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
-        action: 'Action title',
-        link: 'Lorem ipsum link',
-      }],
+      href: '#',
+      featureProduct: [
+        {
+          name: 'PRODUCT NAME',
+          subtitle: 'Lorem ipsum dolor sit amet.',
+          description:
+            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          action: 'Action title',
+          link: 'Lorem ipsum link',
+        },
+      ],
       headerObj: [
         {
           title: 'Chequing Accounts',
@@ -98,16 +106,19 @@ const data = {
     },
     {
       id: 3,
-      key:3,
+      key: 3,
       title: 'Mortgage',
-      href:'#',
-      featureProduct:[{
-        name: 'PRODUCT NAME',
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
-        action: 'Action title',
-        link: 'Lorem ipsum link',
-      }],
+      href: '#',
+      featureProduct: [
+        {
+          name: 'PRODUCT NAME',
+          subtitle: 'Lorem ipsum dolor sit amet.',
+          description:
+            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          action: 'Action title',
+          link: 'Lorem ipsum link',
+        },
+      ],
       headerObj: [
         {
           title: 'Chequing Accounts',
@@ -149,16 +160,19 @@ const data = {
     },
     {
       id: 4,
-      key:4,
+      key: 4,
       title: 'Loans',
-      href:'#',
-      featureProduct:[{
-        name: 'PRODUCT NAME',
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
-        action: 'Action title',
-        link: 'Lorem ipsum link',
-      }],
+      href: '#',
+      featureProduct: [
+        {
+          name: 'PRODUCT NAME',
+          subtitle: 'Lorem ipsum dolor sit amet.',
+          description:
+            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          action: 'Action title',
+          link: 'Lorem ipsum link',
+        },
+      ],
       headerObj: [
         {
           title: 'Lines of Credit',
@@ -192,29 +206,32 @@ const data = {
           ],
         },
         {
-            title: 'Useful resources',
-            items: [
-              'Personal loan comparison tool',
-              'Personal loan credit insurance calculator',
-              'Find a financing product',
-              'Reorganizing loans for tax effiency',
-              'Keeping your financial health strong',
-            ],
-          },
+          title: 'Useful resources',
+          items: [
+            'Personal loan comparison tool',
+            'Personal loan credit insurance calculator',
+            'Find a financing product',
+            'Reorganizing loans for tax effiency',
+            'Keeping your financial health strong',
+          ],
+        },
       ],
     },
     {
       id: 5,
-      key:5,
+      key: 5,
       title: 'Investments',
-      href:'#',
-      featureProduct:[{
-        name: 'PRODUCT NAME',
-        subtitle: 'Lorem ipsum dolor sit amet.',
-        description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' ,
-        action: 'Action title',
-        link: 'Lorem ipsum link >',
-      }],
+      href: '#',
+      featureProduct: [
+        {
+          name: 'PRODUCT NAME',
+          subtitle: 'Lorem ipsum dolor sit amet.',
+          description:
+            ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+          action: 'Action title',
+          link: 'Lorem ipsum link >',
+        },
+      ],
       headerObj: [
         {
           title: 'Investment Products',
