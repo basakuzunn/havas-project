@@ -4,10 +4,11 @@ import logo from './Img/LBC Logo.png';
 import data from './NavigationData';
 import MobileNav from './MobileNav';
 
+
 interface Items {
   id: number;
   title: string;
-  key:number;
+  key: number;
   href: string;
   headerObj: { title: string; items: string[] }[];
 }

@@ -32,6 +32,7 @@
 .item-container {
   width: 320px;
   float: right;
+  
 }
 .Logo {
   display: flex;
@@ -213,4 +214,7 @@ justify-content: space-between;
   border-style: none;
   
   width: 230px;
+}
+.sidebar{
+  background-color: red;
 }

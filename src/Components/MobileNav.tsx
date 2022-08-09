@@ -4,7 +4,7 @@ import styles from './MobileNav.module.css';
 import data from './NavigationData';
 import logo from './Img/LBC LogoM.png';
 import Hamburger from 'hamburger-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Backdrop from './Backdrop';
 
 interface Items {
   id: number;
@@ -33,9 +33,11 @@ const MobileNav: React.FC<{}> = () => {
   }
 
   if (showMenu) {
+    
     if (openTitle !== -1) {
       menu = (
         <div className={styles['dropdown-content']}>
+          <Backdrop />
           <button
             className={styles['back-button']}
             onClick={() => {
@@ -83,6 +85,7 @@ const MobileNav: React.FC<{}> = () => {
     } else {
       menu = (
         <div className='menuID'>
+          <Backdrop />
           <ul className={styles['item-container']}>
             {data.navData.map((data: Items) => {
               return (
@@ -166,7 +169,8 @@ const MobileNav: React.FC<{}> = () => {
           }}
         />
       </div>
-      {menu}
+      <div className={styles['sidebar']}>
+      {menu}</div>
     </nav>
   );
 };
