@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './Navigation.module.css';
-import logo from './Img/LBC Logo.png';
-import data from './NavigationData';
-import MobileNav from './MobileNav';
+import logo from '../Img/LBC Logo.png';
+import data from '../NavigationData';
+import MobileNav from '../Mobile Navigation/MobileNav';
 
 
 interface Items {

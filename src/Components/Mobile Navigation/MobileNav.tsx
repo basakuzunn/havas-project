@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './MobileNav.module.css';
 import styles from './MobileNav.module.css';
-import data from './NavigationData';
-import logo from './Img/LBC LogoM.png';
+import data from '../NavigationData';
+import logo from '../Img/LBC LogoM.png';
 import Hamburger from 'hamburger-react';
-import Backdrop from './Backdrop';
+import Backdrop from '../Backdrop/Backdrop';
 
 interface Items {
   id: number;
@@ -13,11 +13,12 @@ interface Items {
   href: string;
   headerObj: { title: string; items: string[] }[];
 }
+
 const MobileNav: React.FC<{}> = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   const [openTitle, setOpenTitle] = useState<number>(-1);
-
+  const [currentTitle, setCurrentTitle] = useState('personal');
   let menu;
 
   function handleTitle(titleIndex: number): void {
@@ -33,11 +34,11 @@ const MobileNav: React.FC<{}> = () => {
   }
 
   if (showMenu) {
-    
     if (openTitle !== -1) {
       menu = (
         <div className={styles['dropdown-content']}>
           <Backdrop />
+          <div className={styles['title']}>{currentTitle}</div>
           <button
             className={styles['back-button']}
             onClick={() => {
@@ -46,6 +47,7 @@ const MobileNav: React.FC<{}> = () => {
           >
             Back to Main Menu
           </button>
+          
           {data.navData[openTitle].headerObj.map((index) => {
             return (
               <ul className={styles['dropdown-ul']}>
@@ -86,7 +88,9 @@ const MobileNav: React.FC<{}> = () => {
       menu = (
         <div className='menuID'>
           <Backdrop />
+          
           <ul className={styles['item-container']}>
+          <div className={styles['title']}>Personal</div>
             {data.navData.map((data: Items) => {
               return (
                 <>
@@ -96,9 +100,12 @@ const MobileNav: React.FC<{}> = () => {
                         onClick={() => {
                           handleTitle(data.id);
                           setOpenMenu(!openMenu);
+                          setCurrentTitle(data.title)
                         }}
+                        value={data.title}
                       >
                         {data.title}
+                        
                       </button>
                     </>
                   </div>
@@ -169,8 +176,7 @@ const MobileNav: React.FC<{}> = () => {
           }}
         />
       </div>
-      <div className={styles['sidebar']}>
-      {menu}</div>
+      <div className={styles['sidebar']}>{menu}</div>
     </nav>
   );
 };
